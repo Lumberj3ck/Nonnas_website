@@ -2278,6 +2278,14 @@ video {
   .min-\[540px\]\:max-w-md {
     max-width: 28rem;
   }
+
+  .min-\[540px\]\:max-w-0 {
+    max-width: 0px;
+  }
+
+  .min-\[540px\]\:max-w-none {
+    max-width: none;
+  }
 }
 
 @media (min-width: 640px) {
