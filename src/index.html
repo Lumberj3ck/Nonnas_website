@@ -20,12 +20,12 @@
         }
         .animate-text {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateX(-40px);
             transition: opacity 0.5s, transform 0.5s;
         }
         .animate-text.animate {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
         }
         *{
             /* border: 1px solid black */
@@ -128,8 +128,8 @@
                 </div>
 
                 <div class="mt-5 flex items-center justify-between">
-                    <div class="max-w-[75%] md:w-10/12 h-px bg-black animate-line"></div>
-                    <div class="flex text-lg animate-text border-0">
+                    <div class="max-w-[75%] md:max-w-[85%] h-0.5 bg-black animate-line"></div>
+                    <div class="flex text-lg animate-text border-0 xl:text-xl">
                         <span>About</span>
                     </div>
                     <!-- <div class="flex text-lg border border-black py-4 px-6">
@@ -175,5 +175,4 @@
 
     </script>
 </body>
-
 </html>
