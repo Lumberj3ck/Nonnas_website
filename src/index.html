@@ -11,17 +11,33 @@
     <link href="../assets/css/index.css" rel="stylesheet">
     <title>Document</title>
     <style>
-        * {
-            /* border: 1px solid green */
+        .animate-line {
+            width: 0;
+            transition: width 1s ease-out;
+        }
+        .animate-line.animate {
+            width: 100%;
+        }
+        .animate-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .animate-text.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        *{
+            /* border: 1px solid black */
         }
     </style>
 </head>
 
 <body>
-    <main class="bg-[#FDF5EA]">
+    <main class="bg-[#FDF5EA] text-decoration">
         <section
-            class=" px-5 pb-32 max-w-max    text-decoration min-[400px]:mx-auto min-[400px]:w-5/6 md:px-0 lg:pt-32 lg:max-w-[1700px] flex flex-col items-center">
-            <div class="max-w-sm min-[540px]:max-w-none min-[640px]:max-w-[30rem] md:max-w-none lg:w-full ">
+            class="px-5 pb-32 max-w-max  min-[400px]:mx-auto min-[400px]:w-5/6 md:px-0 lg:pt-32 lg:max-w-[1700px] flex flex-col items-center">
+            <div class="max-w-sm min-[540px]:max-w-none min-[640px]:max-w-[30rem] md:max-w-none lg:w-full">
                 <div class="md:flex md:flex-row-reverse md:items-center lg:justify-between">
                     <div class="pt-16 pb-10 min-[640px]:w-11/12 md:w-full lg:max-w-md">
                         <img src="../assets/imgs/ice cream main.png" alt="ice cream main">
@@ -29,12 +45,13 @@
 
                     <div class="md:w-11/12 lg:w-2/3 lg:max-w-screen-sm">
                         <div class="md:w-3/4">
-                            <div class="text-[#44A123A3] text-3xl max-w-44 min-[500px]:max-w-none lg:text-5xl lg:leading-snug">
+                            <div
+                                class="text-[#44A123A3] text-3xl max-w-44 min-[500px]:max-w-none lg:text-4xl xs:text-5xl lg:leading-snug">
                                 A place you
                                 <br>
                                 eat tasty
                             </div>
-                            <div class="text-[#158C0391] text-base mt-3 mb-8 lg:text-2xl">
+                            <div class="text-[#158C0391] text-base mt-3 mb-8 lg:text-xl xs:text-2xl">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus
                                 semper habitant
                                 arcu eget. Et integer facilisi eget. Lorem ipsum dolor.
@@ -49,61 +66,114 @@
             </div>
         </section>
         <section class="px-5 pb-24 w-full bg-[#B4D6A3] md:px-0 ">
-            <div class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
+            <div
+                class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
                 <div class="md:flex justify-between md:gap-16">
-                <div class="grid grid-cols-3 min-[375px]:max-w-64 md:max-w-72 lg:max-w-80 xl:max-w-md">
-                    <img src="../assets/imgs/ice_first_option_100w.png"
-                        srcset="../assets/imgs/ice_first_option_270w.png 270w"
-                        alt="first menu option"
-                        class="w-11/12 mr-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
-                    <img src="../assets/imgs/ice_second_option_100w.png" 
-                        srcset="../assets/imgs/ice_second_option_270w.png 270w"
-                        alt="second menu option"
-                        class="w-11/12 mx-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
-                    <img src="../assets/imgs/ice_third_option_100w.png" 
-                        srcset="../assets/imgs/ice_third_option_270w.png 270w"
-                        alt="third menu option"
-                        class="w-11/12 ml-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
-                            <!-- <img 
-                            src="images/image-800w.jpg" 
-                            srcset="images/image-400w.jpg 400w,
-                                    images/image-800w.jpg 800w,
-                                    images/image-1200w.jpg 1200w"
-                            sizes="(max-width: 600px) 400px,
-                                (max-width: 1200px) 800px,
-                                1200px"
-                            alt="A beautiful landscape"> -->
+                    <div class="grid grid-cols-3 min-[375px]:max-w-64 md:max-w-72 lg:max-w-80 xl:max-w-md">
+                        <img src="../assets/imgs/ice_first_option_100w.png"
+                            srcset="../assets/imgs/ice_first_option_270w.png 270w" alt="first menu option"
+                            class="w-11/12 mr-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
+                        <img src="../assets/imgs/ice_second_option_100w.png"
+                            srcset="../assets/imgs/ice_second_option_270w.png 270w" alt="second menu option"
+                            class="w-11/12 mx-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
+                        <img src="../assets/imgs/ice_third_option_100w.png"
+                            srcset="../assets/imgs/ice_third_option_270w.png 270w" alt="third menu option"
+                            class="w-11/12 ml-auto max-w-20 -mt-10 md:max-w-32 lg:max-w-64 lg:-mt-14">
+                    </div>
 
-                </div>
-
-                <div class="mt-12 md:mt-6 md:w-2/4 md:max-w-md">
-                    <div class="w-6 border-[#1E7E3F] border-2 md:w-8 lg:w-10 md:border-3"></div>
-                    <div class="text-[#1E7E3F] text-xl mt-2 lg:text-3xl">
-                        Our menu options
+                    <div class="mt-12 md:mt-6 md:w-2/4 md:max-w-md">
+                        <div class="w-6 border-[#1E7E3F] border-2 md:w-8 lg:w-10 md:border-3"></div>
+                        <div class="text-[#1E7E3F] text-xl mt-2 lg:text-2xl ">
+                            Our menu options
+                        </div>
+                        <div class="text-[#1E7E3F] opacity-80 mt-3 text-base lg:text-lg xs:text-xl">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper
+                        </div>
+                        <div class="grid grid-cols-3 min-[375px]:max-w-64 mt-9 md:max-w-72 lg:max-w-96">
+                            <img src="../assets/imgs/position_2.png" alt="position 2"
+                                srcset="../assets/imgs/position_2_280w.png 280w"
+                                class="w-11/12 mr-auto max-w-20 lg:max-w-24 xl:max-w-28">
+                            <img src="../assets/imgs/position_3.png" alt="position 3"
+                                srcset="../assets/imgs/position_3_280w.png 280w"
+                                class="w-11/12 mr-auto max-w-20 lg:max-w-24 xl:max-w-28">
+                            <img src="../assets/imgs/position_4.png" alt="position 4"
+                                srcset="../assets/imgs/position_4_280w.png 280w"
+                                class="w-11/12 mr-auto max-w-20 lg:max-w-24 xl:max-w-28">
+                        </div>
                     </div>
-                    <div class="text-[#1E7E3F] opacity-80 mt-3 text-base lg:text-xl">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus in libero risus semper
-                    </div>
-                    <div class="grid grid-cols-3 min-[375px]:max-w-64 mt-9 md:max-w-72 lg:max-w-96">
-                        <img src="../assets/imgs/position_2.png" alt="position 2"
-                            srcset="../assets/imgs/position_2_280w.png 280w"
-                            class="w-11/12 mr-auto max-w-20 lg:max-w-28">
-                        <img src="../assets/imgs/position_3.png" alt="position 3"
-                            srcset="../assets/imgs/position_3_280w.png 280w"
-                            class="w-11/12 mr-auto max-w-20 lg:max-w-28">
-                        <img src="../assets/imgs/position_4.png" alt="position 4"
-                            srcset="../assets/imgs/position_4_280w.png 280w"
-                            class="w-11/12 mr-auto max-w-20 lg:max-w-28">
-                    </div>
-                </div>
                 </div>
             </div>
         </section>
+        <section class="px-5 pt-14 pb-5">
+            <div
+                class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
+                <div class="md:flex md:items-center lg:justify-between lg:mb-10">
+                    <div class="max-w-64 min-[400px]:max-w-72 md:max-w-64 lg:max-w-80 xl:max-w-sm">
+                        <img src="../assets/imgs/about_180w.png" alt="first menu option" class="w-5/6 "
+                            sizes="(max-width: 500px) 180w" srcset="
+                    ../assets/imgs/about_180w.png 180w,
+                    ../assets/imgs/about_400w.png 400w">
+                    </div>
+                    <div
+                        class="text-base leading-8 pt-8 md:w-2/3 lg:text-lg lg:leading-9 lg:w-1/2 xl:w-full xl:text-xl xl:leading-10">
+                        Our story is one of passion and refinement, where each dish is a
+                        carefully
+                        curated masterpiece. Elegance graces every detail, inviting you into a world where exquisite
+                        flavors
+                        and
+                        sophisticated ambiance harmonize, creating an unforgettable dining experience. Welcome to the
+                        epitome of
+                        gastronomic delight.
+                    </div>
+                </div>
+
+                <div class="mt-5 flex items-center justify-between">
+                    <div class="max-w-[75%] md:w-10/12 h-px bg-black animate-line"></div>
+                    <div class="flex text-lg animate-text border-0">
+                        <span>About</span>
+                    </div>
+                    <!-- <div class="flex text-lg border border-black py-4 px-6">
+                        <span>About</span>
+                    </div> -->
+                </div>
+                <!-- <div class="mt-5">
+                    <div class="flex justify-end text-lg">
+                        <span>About</span>
+                    </div>
+                    <div class="w-full h-px bg-black " ></div>
+                </div> -->
+            </div>
+        </section>
         <section>
-            <img src="../assets/imgs/about_180w.png" alt="first menu option"
-                srcset="../assets/imgs/about_280w.png 280w"
-            <div> Our story is one of passion and refinement, where each dish is a carefully curated masterpiece. Elegance graces every detail, inviting you into a world where exquisite flavors and sophisticated ambiance harmonize, creating an unforgettable dining experience. Welcome to the epitome of gastronomic delight.</div>
+            <div class="max-w-max w-96 h-96">
+
+            </div>
+        </section>
+        <section>
+            <div class="w-96 h-96 max-w-max">
+
+            </div>
         </section>
     </main>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                } else {
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, {
+            threshold: 0.1  
+        });
+
+        document.querySelectorAll('.animate-line, .animate-text').forEach(element => {
+            observer.observe(element);
+        });
+
+
+    </script>
 </body>
+
 </html>
