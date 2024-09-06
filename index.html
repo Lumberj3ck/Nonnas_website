@@ -31,17 +31,20 @@
             opacity: 1;
             transform: translateX(0);
         }
-        .menu_button.active{
+
+        .menu_button.active {
             color: green;
             text-decoration: underline;
             text-underline-offset: 5px;
             text-decoration-thickness: 2.5px;
         }
+
         .menu-content {
             transition: opacity 0.5s ease, transform 0.5s ease;
             opacity: 0;
             transform: translateY(20px);
         }
+
         .menu-content.active {
             opacity: 1;
             transform: translateY(0);
@@ -282,7 +285,7 @@
             });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const caffeButton = document.getElementById('caffe_button');
             const iceButton = document.getElementById('ice_button');
             const cakeButton = document.getElementById('cake_button');
@@ -292,6 +295,9 @@
             const cakeMenu = document.getElementById('cake');
 
             function showMenu(menuToShow, buttonToActivate) {
+                if (buttonToActivate.classList.contains('active')) {
+                    return; 
+                }
                 cafeMenu.classList.remove('active');
                 iceMenu.classList.remove('active');
                 cakeMenu.classList.remove('active')
@@ -308,7 +314,7 @@
                     cakeMenu.classList.add('hidden');
 
                     menuToShow.classList.remove('hidden');
-                    
+
                     setTimeout(() => {
                         menuToShow.classList.add('active');
                         buttonToActivate.classList.add('active');
@@ -316,14 +322,14 @@
                 }, 300);
             }
 
-            caffeButton.addEventListener('click', function() {
+            caffeButton.addEventListener('click', function () {
                 showMenu(cafeMenu, caffeButton);
             });
 
-            iceButton.addEventListener('click', function() {
+            iceButton.addEventListener('click', function () {
                 showMenu(iceMenu, iceButton);
             });
-            cakeButton.addEventListener('click', function() {
+            cakeButton.addEventListener('click', function () {
                 showMenu(cakeMenu, cakeButton);
             });
 
@@ -331,4 +337,5 @@
         });
     </script>
 </body>
+
 </html>
