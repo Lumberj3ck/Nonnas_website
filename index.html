@@ -337,10 +337,14 @@
             const iceMenu = document.getElementById('ice');
             const cakeMenu = document.getElementById('cake');
 
+            let isAnimating = false; // Flag to check if animation is in progress
+
             function showMenu(menuToShow, buttonToActivate) {
-                if (buttonToActivate.classList.contains('active')) {
+                if (isAnimating || buttonToActivate.classList.contains('active')) {
                     return; 
                 }
+                isAnimating = true; // Lock actions while animating
+
                 cafeMenu.classList.remove('active');
                 iceMenu.classList.remove('active');
                 cakeMenu.classList.remove('active')
@@ -361,6 +365,7 @@
                     setTimeout(() => {
                         menuToShow.classList.add('active');
                         buttonToActivate.classList.add('active');
+                        isAnimating = false; 
                     }, 50);
                 }, 300);
             }
