@@ -207,6 +207,7 @@
             <div class="flex gap-5 justify-center">
                 <div id="caffe_button" class="menu_button">Caffe</div>
                 <div id="ice_button" class="menu_button">Ice Cream</div>
+                <div id="cake_button" class="menu_button">Cake</div>
             </div>
             <div id="cafe" class="menu-content">
                 <div class="flex items-center w-11/12 mx-auto">
@@ -235,6 +236,22 @@
                 <div class="flex items-center w-11/12 mx-auto mt-4">
                     <div>
                         <div class="font-bold">Ice cream scoop</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
+                </div>
+            </div>
+            <div id="cake" class="menu-content">
+                <div class="flex items-center w-11/12 mx-auto">
+                    <div>
+                        <div class="font-bold">Vanila cake</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
+                </div>
+                <div class="flex items-center w-11/12 mx-auto mt-4">
+                    <div>
+                        <div class="font-bold">Teramisu</div>
                         <div>Toasted French bread topped with romano, cheddar</div>
                     </div>
                     <div>32$</div>
@@ -275,26 +292,20 @@
             const cakeMenu = document.getElementById('cake');
 
             function showMenu(menuToShow, buttonToActivate) {
-                // cafeMenu.classList.add('hidden');
-                // iceMenu.classList.add('hidden');
-                // menuToShow.classList.remove('hidden');
-
-                // caffeButton.classList.remove('active');
-                // iceButton.classList.remove('active');
                 cafeMenu.classList.remove('active');
                 iceMenu.classList.remove('active');
-                // cakeMenu.classList.remove('active')
+                cakeMenu.classList.remove('active')
 
                 caffeButton.classList.remove('active');
                 iceButton.classList.remove('active');
-                // cakeButton.classList.remove('active')
+                cakeButton.classList.remove('active')
 
                 // buttonToActivate.classList.add('active');
 
                 setTimeout(() => {
                     cafeMenu.classList.add('hidden');
                     iceMenu.classList.add('hidden');
-                    // cakeMenu.classList.add('hidden');
+                    cakeMenu.classList.add('hidden');
 
                     menuToShow.classList.remove('hidden');
                     
@@ -303,7 +314,6 @@
                         buttonToActivate.classList.add('active');
                     }, 50);
                 }, 300);
-
             }
 
             caffeButton.addEventListener('click', function() {
@@ -312,6 +322,9 @@
 
             iceButton.addEventListener('click', function() {
                 showMenu(iceMenu, iceButton);
+            });
+            cakeButton.addEventListener('click', function() {
+                showMenu(cakeMenu, cakeButton);
             });
 
             showMenu(iceMenu, iceButton);
