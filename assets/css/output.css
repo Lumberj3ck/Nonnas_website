@@ -1806,6 +1806,10 @@ video {
   gap: 1.25rem;
 }
 
+.gap-7 {
+  gap: 1.75rem;
+}
+
 .self-stretch {
   align-self: stretch;
 }
