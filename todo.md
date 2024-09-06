@@ -1,0 +1,1 @@
+paragraph lg:text-lg

@@ -31,6 +31,21 @@
             opacity: 1;
             transform: translateX(0);
         }
+        .menu_button.active{
+            color: green;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+            text-decoration-thickness: 2.5px;
+        }
+        .menu-content {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .menu-content.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         * {
             /* border: 1px solid black */
@@ -117,10 +132,8 @@
                 <div class="mb-5 md:flex md:items-center lg:justify-between lg:mb-10">
                     <div class="max-w-64 min-[400px]:max-w-72 md:max-w-64 lg:max-w-80 xl:max-w-sm">
                         <img src="assets/imgs/about_180w.png" alt="first menu option" class="w-5/6"
-                            sizes="(max-width: 500px) 180w" srcset="
-                  assets/imgs/about_180w.png 180w,
-                  assets/imgs/about_400w.png 400w
-                " />
+                            sizes="(max-width: 500px) 180w" srcset="assets/imgs/about_180w.png 180w,
+                                    assets/imgs/about_400w.png 400w" />
                     </div>
                     <div
                         class="text-base leading-8 pt-8 md:w-2/3 lg:text-lg lg:leading-9 lg:w-1/2 xl:w-full xl:text-xl xl:leading-10">
@@ -149,25 +162,82 @@
                 </div> -->
             </div>
         </section>
-        <section class="px-5 bg-[#B4D6A3] pt-14">
+        <section class="px-5 bg-[#B4D6A3] pt-14 pb-24">
             <div
                 class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
                 <div class="grid md:grid-cols-2 ">
-                    <img src="assets/imgs/cafe_photo_2.png" alt="second cafe photo" class="w-full" />
+                    <img src="assets/imgs/cafe_photo.png" alt="second cafe photo"
+                        class="w-full min-[540px]:w-10/12 md:w-full" srcset="
+                                assets/imgs/cafe_photo_2.png 400w,
+                                assets/imgs/cafe_photo_2_500w.png 500w,
+                                assets/imgs/cafe_photo_2_650w.png 650w,
+                                assets/imgs/cafe_photo_2_830w.png 830w" sizes="(max-width: 500px) 340w" />
                     <div class="md:order-first">
-                        <img src="assets/imgs/cafe_photo.png" alt="cafe photo" class="w-full" />
-                        <div class="text-white">Our cafe</div>
-                        <div>
-                            Immerse yourself in the warm embrace of our indoor oasis, savor
-                            al-fresco moments on our charming outdoor terrace, or unwind at
-                            the stylish bar where crafted libations await. Discover a
-                            trifecta of atmospheres that elevate your dining journey
-                        </div>
-                        <div
-                            class="flex justify-center w-3/4 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:px-6 lg:py-4 lg:rounded-full">
-                            <span>Discover our location</span>
+                        <img src="assets/imgs/cafe_photo.png" alt="cafe photo"
+                            class="w-full min-[540px]:w-10/12 md:w-full" srcset="
+                                    assets/imgs/cafe_photo.png 260w,
+                                    assets/imgs/cafe_photo_400w.png 400w,
+                                    assets/imgs/cafe_photo_500w.png 500w,
+                                    assets/imgs/cafe_photo_830w.png 830w" sizes="(max-width: 500px) 340w" />
+                        <div class="w-11/12">
+                            <div class="text-[#1E7E3F] text-2xl mt-5 lg:text-3xl">Our cafe</div>
+                            <div class="text-[#1E7E3F] opacity-80 mt-1 lg:text-lg">
+                                Immerse yourself in the warm embrace of our indoor oasis, savor
+                                al-fresco moments on our charming outdoor terrace, or unwind at
+                                the stylish bar where crafted libations await. Discover a
+                                trifecta of atmospheres that elevate your dining journey
+                            </div>
+                            <div
+                                class="mt-9 flex justify-center w-11/12 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:max-w-56 lg:rounded-full">
+                                <span>Discover our location</span>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-4 pb-24">
+            <div class="flex text-2xl ">
+                <span class="mx-auto">Our food menu</span>
+            </div>
+            <div class="w-11/12 mx-auto">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue
+            </div>
+            <div class="flex gap-5 justify-center">
+                <div id="caffe_button" class="menu_button">Caffe</div>
+                <div id="ice_button" class="menu_button">Ice Cream</div>
+            </div>
+            <div id="cafe" class="menu-content">
+                <div class="flex items-center w-11/12 mx-auto">
+                    <div>
+                        <div class="font-bold">Black coffe</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
+                </div>
+                <div class="flex items-center w-11/12 mx-auto mt-4">
+                    <div>
+                        <div class="font-bold">Cappucino</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
+                </div>
+            </div>
+            <div id="ice" class="menu-content">
+                <div class="flex items-center w-11/12 mx-auto">
+                    <div>
+                        <div class="font-bold">Vanila ice cream</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
+                </div>
+                <div class="flex items-center w-11/12 mx-auto mt-4">
+                    <div>
+                        <div class="font-bold">Ice cream scoop</div>
+                        <div>Toasted French bread topped with romano, cheddar</div>
+                    </div>
+                    <div>32$</div>
                 </div>
             </div>
         </section>
@@ -194,6 +264,58 @@
                 observer.observe(element);
             });
     </script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const caffeButton = document.getElementById('caffe_button');
+            const iceButton = document.getElementById('ice_button');
+            const cakeButton = document.getElementById('cake_button');
 
+            const cafeMenu = document.getElementById('cafe');
+            const iceMenu = document.getElementById('ice');
+            const cakeMenu = document.getElementById('cake');
+
+            function showMenu(menuToShow, buttonToActivate) {
+                // cafeMenu.classList.add('hidden');
+                // iceMenu.classList.add('hidden');
+                // menuToShow.classList.remove('hidden');
+
+                // caffeButton.classList.remove('active');
+                // iceButton.classList.remove('active');
+                cafeMenu.classList.remove('active');
+                iceMenu.classList.remove('active');
+                // cakeMenu.classList.remove('active')
+
+                caffeButton.classList.remove('active');
+                iceButton.classList.remove('active');
+                // cakeButton.classList.remove('active')
+
+                // buttonToActivate.classList.add('active');
+
+                setTimeout(() => {
+                    cafeMenu.classList.add('hidden');
+                    iceMenu.classList.add('hidden');
+                    // cakeMenu.classList.add('hidden');
+
+                    menuToShow.classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        menuToShow.classList.add('active');
+                        buttonToActivate.classList.add('active');
+                    }, 50);
+                }, 300);
+
+            }
+
+            caffeButton.addEventListener('click', function() {
+                showMenu(cafeMenu, caffeButton);
+            });
+
+            iceButton.addEventListener('click', function() {
+                showMenu(iceMenu, iceButton);
+            });
+
+            showMenu(iceMenu, iceButton);
+        });
+    </script>
+</body>
 </html>
