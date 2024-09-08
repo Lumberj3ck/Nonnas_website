@@ -12,6 +12,15 @@
     <link href="assets/css/index.css" rel="stylesheet" />
     <title>Document</title>
     <style>
+        .carousel_bar_hide{
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;/
+        }
+
         .animate-line {
             width: 0;
             transition: width 1s ease-out;
@@ -82,11 +91,13 @@
                                 facilisi eget. Lorem ipsum dolor.
                             </div>
                         </div>
-                        <div
-                            class="flex justify-center w-3/4 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:px-6 lg:py-4 lg:rounded-full">
-                            <!-- <span>Explore the menu</span> -->
-                            <a href="src/menu.html">Explore the menu</a>
-                        </div>
+                        <a href="src/menu.html" class="cursor-pointer">
+                            <div
+                                class="flex justify-center w-3/4 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:px-6 lg:py-4 lg:rounded-full">
+                                <!-- <span>Explore the menu</span> -->
+                                Explore the menu
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -168,7 +179,8 @@
             </div>
         </section>
         <section class="px-5 bg-[#B4D6A3] pt-14 pb-24">
-            <div class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
+            <div
+                class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
                 <div class="grid md:grid-cols-2 ">
                     <img src="assets/imgs/cafe_photo.png" alt="second cafe photo"
                         class="w-full min-[540px]:w-10/12 md:w-full" srcset="
@@ -192,7 +204,7 @@
                                 trifecta of atmospheres that elevate your dining journey
                             </div>
                             <div
-                                class="mt-9 flex justify-center w-11/12 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:max-w-56 lg:rounded-full">
+                                class="cursor-pointer mt-9 flex justify-center w-11/12 px-5 py-4 max-w-52 leading-none text-white rounded-3xl bg-[#7E009E] opacity-[.78] lg:text-lg lg:max-w-56 lg:rounded-full">
                                 <span>Discover our location</span>
                             </div>
                         </div>
@@ -202,108 +214,192 @@
         </section>
 
         <section class="px-5 pt-14 pb-24">
-            <div class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
-            <div class="flex text-2xl  lg:text-3xl mb-5">
-                <span class="mx-auto">Our food menu</span>
-            </div>
-            <div class="text-sm mb-8  md:w-3/4 lg:w-2/3 xl:w-2/4 lg:mb-14 lg:text-lg md:mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa congue
-            </div>
-            <div class="flex gap-7 justify-center mb-9 lg:gap-9">
-                <div id="caffe_button" class="menu_button lg:text-xl">Caffe</div>
-                <div id="ice_button" class="menu_button lg:text-xl">Ice Cream</div>
-                <div id="cake_button" class="menu_button lg:text-xl">Cake</div>
-            </div>
-            <div id="cafe" class="menu-content flex flex-wrap flex-row justify-between">
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+            <div
+                class="lg:max-w-[1700px] min-[400px]:w-5/6 min-[400px]:mx-auto min-[640px]:max-w-[30rem] max-w-sm min-[540px]:max-w-none md:max-w-none">
+                <div class="pb-24">
+                    <div class="flex text-2xl  lg:text-3xl mb-3 font-semibold">
+                        <span class="mx-auto">Our food category</span>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="opacity-60 text-sm mb-8 md:w-3/4 lg:w-2/3 xl:w-2/4 lg:mb-14 lg:text-lg md:mx-auto">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa
+                        congue
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex justify-center gap-5">
+                        <div id="prevBtn" class="flex items-center cursor-pointer">
+                            <div 
+                                class="font-bold text-2xl text-black bg-[#195A00]/30 rounded-lg w-9 h-12 md:w-12 md:h-14 flex items-center justify-center">
+                                < 
+                            </div>
+                        </div>
+                        <div id="carousel" class="flex overflow-scroll gap-3 carousel_bar_hide max-w-2xl">
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56 carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+
+
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                            <div class="max-w-48 md:max-w-52 min-w-[180px] md:min-w-52 xl:min-w-56 xl:max-w-56   carousel-item">
+                                <img src="assets/imgs/cake_food.png" alt="">
+                                <div class="font-bold flex justify-center items-center text-lg mt-4"><span>Ice
+                                        cream</span></div>
+                                <div class="font-ligh flex justify-center items-center"><span>4 usd</span></div>
+                            </div>
+                        </div>
+                        <div id="nextBtn" class="flex items-center cursor-pointer">
+                            <div
+                                class="font-bold text-2xl text-black bg-[#1a5a00bd] rounded-lg w-9 h-12 md:w-12 md:h-14 flex items-center justify-center">
+                                >
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                 </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+
+                <div class="flex text-2xl  lg:text-3xl mb-5 font-semibold">
+                    <span class="mx-auto">Our food menu</span>
+                </div>
+                <div class="text-sm mb-8 opacity-60  md:w-3/4 lg:w-2/3 xl:w-2/4 lg:mb-14 lg:text-lg md:mx-auto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed pharetra dictum neque massa
+                    congue
+                </div>
+                <div class="flex gap-7 justify-center mb-9 lg:gap-9">
+                    <div id="caffe_button" class="menu_button lg:text-xl">Caffe</div>
+                    <div id="ice_button" class="menu_button lg:text-xl">Ice Cream</div>
+                    <div id="cake_button" class="menu_button lg:text-xl">Cake</div>
+                </div>
+                <div id="cafe" class="menu-content flex flex-wrap flex-row justify-between">
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-            </div>
-            <div id="ice" class="menu-content flex flex-wrap flex-row justify-between">
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                 </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                <div id="ice" class="menu-content flex flex-wrap flex-row justify-between">
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-            </div>
-            <div id="cake" class="menu-content flex flex-wrap flex-row justify-between">
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
-                </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                 </div>
-                <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
-                    <div>
-                        <div class="font-bold lg:text-xl">Black coffe</div>
-                        <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar</div>
+                <div id="cake" class="menu-content flex flex-wrap flex-row justify-between">
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
                     </div>
-                    <div class="text-[#1E7E3F] lg:text-lg">32$</div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
+                    </div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
+                    </div>
+                    <div class="flex mt-8 justify-between md:w-[45%] w-full gap-5">
+                        <div>
+                            <div class="font-bold lg:text-xl">Black coffe</div>
+                            <div class="text-sm mt-2 lg:text-base">Toasted French bread topped with romano, cheddar
+                            </div>
+                        </div>
+                        <div class="text-[#1E7E3F] lg:text-lg">32$</div>
+                    </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
@@ -343,7 +439,7 @@
 
             function showMenu(menuToShow, buttonToActivate) {
                 if (isAnimating || buttonToActivate.classList.contains('active')) {
-                    return; 
+                    return;
                 }
                 isAnimating = true; // Lock actions while animating
 
@@ -367,7 +463,7 @@
                     setTimeout(() => {
                         menuToShow.classList.add('active');
                         buttonToActivate.classList.add('active');
-                        isAnimating = false; 
+                        isAnimating = false;
                     }, 50);
                 }, 300);
             }
@@ -386,6 +482,25 @@
             showMenu(iceMenu, iceButton);
         });
     </script>
-</body>
+    <script>
+        const track = document.querySelector('#carousel');
 
+        let gap = 19.5
+        // let gap = 0
+        let scrollwidth = document.querySelector('.carousel-item').clientWidth + gap
+        function scrollRight() {
+            track.scrollBy({ left: scrollwidth, behavior: 'smooth' });
+        }
+
+        function scrollLeft() {
+            track.scrollBy({ left: scrollwidth * -1, behavior: 'smooth' });
+        }
+
+        let prevButton = document.querySelector('#prevBtn')
+        let nextButton = document.querySelector('#nextBtn')
+
+        prevButton.addEventListener('click', scrollLeft)
+        nextButton.addEventListener('click', scrollRight)
+    </script>
+</body>
 </html>
