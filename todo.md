@@ -1,1 +1,2 @@
-paragraph lg:text-lg
+turn off the scroll on mobile
+add buttons hover
